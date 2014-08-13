@@ -37,7 +37,6 @@ mobile = [
  '659',
  '660',
  '661',
- '664',
  '665',
  '666',
  '667',
@@ -91,6 +90,7 @@ Phony.define do
                 one_of(corporate) >> split(5..5) |
                 one_of(ndcs)      >> split(6..6) |
                 one_of('663')     >> split(6..6) | # 6 digit mobile.
+                one_of('664')     >> split(8..8) | # 8 digit mobile.
                 one_of(mobile)    >> split(7..7) |
                 one_of(mobile_orange) >> split(8..8) | # Orange Austria
                 one_of(mobile_2digit) >> split(7..7) | # Separate as mobile contains 676 - 67 violates the prefix rule.
